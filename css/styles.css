@@ -65,11 +65,11 @@ section{padding:96px 0;position:relative;overflow:hidden}
 .hero-lead{color:var(--ink-2);font-size:1.1rem;max-width:520px;margin-top:22px}
 .hero-cta{margin-top:32px}
 .portrait-wrap{position:relative}
-.portrait{position:relative;aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:radial-gradient(120% 90% at 30% 20%,#F3DCE2 0%,transparent 55%),linear-gradient(150deg,#EADFCF 0%,#E4D2D8 48%,#D8DFDC 100%);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--ink-2);animation:float 7s ease-in-out infinite}
+.portrait{position:relative;aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:linear-gradient(150deg,#EADFCF 0%,#E4D2D8 48%,#D8DFDC 100%);border:1px solid var(--line);animation:float 7s ease-in-out infinite}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block}
+.portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(190deg,transparent 55%,color-mix(in srgb,var(--worth) 14%,transparent) 100%);pointer-events:none}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
-.portrait .ph-label{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase}
-.portrait .ph-icon{width:40px;height:40px;opacity:.5}
-.portrait .ribbon{position:absolute;left:18px;bottom:18px;width:84px}
+.portrait .ribbon{position:absolute;left:18px;bottom:18px;width:84px;z-index:2;box-shadow:0 2px 10px rgba(0,0,0,.18)}
 
 /* мой опыт */
 .exp{margin-top:60px;border-top:1px solid var(--line);padding-top:40px}
