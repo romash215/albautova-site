@@ -62,7 +62,7 @@ a{color:var(--btn);text-decoration:none}
 .mobile-menu.open{display:flex;max-height:420px;opacity:1;padding:8px 28px 22px}
 .mobile-menu a{padding:15px 4px;font-size:1.02rem;font-weight:500;color:var(--ink);border-bottom:1px solid var(--line);display:block}
 .mobile-menu a:last-child{border-bottom:none}
-.mobile-menu a.btn{margin-top:14px;justify-content:center;border-bottom:none;padding:.95em 1.7em}
+.mobile-menu a.btn{margin-top:14px;justify-content:center;border-bottom:none;padding:.95em 1.7em;color:#fff}
 
 section{padding:96px 0;position:relative;overflow:hidden}
 .sec-head{max-width:720px;margin-bottom:50px}
