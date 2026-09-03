@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://romash215.github.io/albautova-site/sitemap.xml

@@ -36,3 +36,34 @@ document.addEventListener('click', e => {
   e.preventDefault();
   showPage(t.dataset.go === 'brand' ? 'page-brand' : 'page-home');
 });
+
+// Бургер-меню (мобильная навигация)
+document.querySelectorAll('.nav').forEach(nav => {
+  const burger = nav.querySelector('.burger');
+  const menu = nav.querySelector('.mobile-menu');
+  if (!burger || !menu) return;
+
+  const closeMenu = () => {
+    menu.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+  };
+  const openMenu = () => {
+    menu.classList.add('open');
+    burger.setAttribute('aria-expanded', 'true');
+  };
+
+  burger.addEventListener('click', e => {
+    e.stopPropagation();
+    menu.classList.contains('open') ? closeMenu() : openMenu();
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  document.addEventListener('click', e => {
+    if (!nav.contains(e.target)) closeMenu();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeMenu();
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 880) closeMenu();
+  });
+});

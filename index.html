@@ -5,6 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Виктория Албаутова — карьерный и life коуч, брендинг, духовные сессии</title>
 <meta name="description" content="Карьерный и life коуч, эксперт по брендингу и коммуникациям. Духовные сессии, карьерный коучинг, брендинг.">
+
+<!-- favicon и иконки (в стилистике сайта — цветовая выкраска-ribbon) -->
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#F4EDE2">
+
+<!-- превью при пересылке ссылки (соцсети, мессенджеры) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://romash215.github.io/albautova-site/">
+<meta property="og:title" content="Виктория Албаутова — карьерный и life коуч, брендинг, духовные сессии">
+<meta property="og:description" content="Карьерный и life коуч, эксперт по брендингу и коммуникациям. Духовные сессии, карьерный коучинг, брендинг.">
+<meta property="og:image" content="https://romash215.github.io/albautova-site/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Виктория Албаутова — карьерный и life коуч, брендинг, духовные сессии">
+<meta name="twitter:description" content="Карьерный и life коуч, эксперт по брендингу и коммуникациям. Духовные сессии, карьерный коучинг, брендинг.">
+<meta name="twitter:image" content="https://romash215.github.io/albautova-site/img/og-image.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,6 +47,15 @@
       <a href="#meeting">Встреча-знакомство</a>
       <a href="https://albautova.youcanbook.me/" target="_blank" rel="noopener" class="btn nav-cta">Записаться</a>
     </div>
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu-home">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu-home">
+    <a href="#about">Обо мне</a>
+    <a href="#directions">Направления</a>
+    <a href="#meeting">Встреча-знакомство</a>
+    <a href="https://albautova.youcanbook.me/" target="_blank" rel="noopener" class="btn">Записаться</a>
   </div>
 </nav>
 
@@ -134,6 +166,12 @@
 
     </div>
 
+    <article class="card wide soon reveal" style="--c:var(--worth)">
+      <span class="soon-badge">Скоро</span>
+      <div class="card-head"><span class="chip"></span><h3>Курс «Самоценность»</h3></div>
+      <p>Готовлю отдельный курс о самоценности — глубже раскрывающий тему, с которой чаще всего приходят на духовные сессии и в мастерскую брендинга. Анонс совсем скоро, следите за обновлениями на этой странице.</p>
+    </article>
+
     <div class="dir-cta reveal">
       <a href="https://albautova.youcanbook.me/" target="_blank" rel="noopener" class="btn">Записаться на сессию <span class="arr">→</span></a>
     </div>
@@ -221,7 +259,16 @@
 <nav class="nav">
   <div class="wrap nav-in">
     <a class="back" data-go="home">← Виктория Албаутова</a>
-    <a href="#formats" class="btn" style="padding:.62em 1.3em;font-size:.85rem">Оставить заявку</a>
+    <a href="#formats" class="btn nav-cta" style="padding:.62em 1.3em;font-size:.85rem">Оставить заявку</a>
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu-brand">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu-brand">
+    <a href="#steps">Программа</a>
+    <a href="#formats">Форматы и цены</a>
+    <a href="#formats" class="btn">Оставить заявку</a>
+    <a data-go="home" style="cursor:pointer">← На главную</a>
   </div>
 </nav>
 

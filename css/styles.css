@@ -51,6 +51,19 @@ a{color:var(--btn);text-decoration:none}
 .nav-links a:hover{color:var(--ink)}
 .nav-cta{padding:.62em 1.3em;font-size:.85rem}
 
+/* бургер-меню (мобильная навигация) */
+.burger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;border:1px solid var(--line);border-radius:10px;background:transparent;cursor:pointer;flex:none;padding:0;-webkit-tap-highlight-color:transparent}
+.burger span{display:block;width:20px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s ease,opacity .3s ease}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+.mobile-menu{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 18px 40px -24px rgba(43,37,32,.35);padding:0 28px;gap:2px;max-height:0;overflow:hidden;opacity:0;transition:max-height .35s ease,opacity .3s ease,padding .35s ease}
+.mobile-menu.open{display:flex;max-height:420px;opacity:1;padding:8px 28px 22px}
+.mobile-menu a{padding:15px 4px;font-size:1.02rem;font-weight:500;color:var(--ink);border-bottom:1px solid var(--line);display:block}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu a.btn{margin-top:14px;justify-content:center;border-bottom:none;padding:.95em 1.7em}
+
 section{padding:96px 0;position:relative;overflow:hidden}
 .sec-head{max-width:720px;margin-bottom:50px}
 .sec-head .ribbon{margin-bottom:22px}
@@ -104,6 +117,13 @@ section{padding:96px 0;position:relative;overflow:hidden}
 .card.wide ul{display:grid;grid-template-columns:1fr 1fr;gap:10px 40px}
 .dir-cta{display:flex;justify-content:center;margin-top:48px}
 
+/* тизер «скоро» (напр. анонс курса) */
+.card.soon{margin-top:26px;border-style:dashed;border-color:color-mix(in srgb,var(--c) 45%,var(--line));background:color-mix(in srgb,var(--c) 5%,var(--paper))}
+.card.soon .card-head{margin-bottom:12px}
+.card.soon .card-head h3{padding-right:88px}
+.card.soon p{margin-bottom:0}
+.soon-badge{position:absolute;top:22px;right:26px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--c);padding:.4em 1em;border-radius:30px}
+
 /* акцент-разделитель */
 .quote-band{padding:118px 0;text-align:center;background:linear-gradient(180deg,#F0E7DA 0%,var(--cream) 100%)}
 .quote-band .ribbon{width:150px;margin:0 auto 30px}
@@ -145,7 +165,9 @@ footer a:hover{color:#fff}
   .dir-grid{grid-template-columns:1fr}
   .card.wide ul{grid-template-columns:1fr}
   .meet-grid{grid-template-columns:1fr;gap:34px}
-  .nav-links a:not(.nav-cta){display:none}
+  .nav-links{display:none}
+  .nav-cta{display:none}
+  .burger{display:flex}
 }
 @media(max-width:560px){
   .wrap{padding:0 20px}
@@ -241,4 +263,5 @@ footer a:hover{color:#fff}
   .big-quote,.hero h1 .accent,#page-brand .hero h1 .accent{animation:none}
   .portrait{animation:none}
   .btn,.card,.card-link,.link-more,.chip,#page-brand .step,#page-brand .num{transition:none}
+  .mobile-menu,.burger span{transition:none}
 }
