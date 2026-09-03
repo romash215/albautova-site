@@ -50,6 +50,7 @@ a{color:var(--btn);text-decoration:none}
 .nav-links a{color:var(--ink-2);font-size:.9rem;font-weight:500;transition:color .2s}
 .nav-links a:hover{color:var(--ink)}
 .nav-cta{padding:.62em 1.3em;font-size:.85rem}
+.nav-links a.nav-cta,.nav-links a.nav-cta:hover{color:#fff}
 
 /* бургер-меню (мобильная навигация) */
 .burger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;border:1px solid var(--line);border-radius:10px;background:transparent;cursor:pointer;flex:none;padding:0;-webkit-tap-highlight-color:transparent}
