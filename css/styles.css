@@ -119,11 +119,6 @@ section{padding:96px 0;position:relative;overflow:hidden}
 .dir-cta{display:flex;justify-content:center;margin-top:48px}
 
 /* тизер «скоро» (напр. анонс курса) */
-.card.soon{margin-top:26px;border-style:dashed;border-color:color-mix(in srgb,var(--c) 45%,var(--line));background:color-mix(in srgb,var(--c) 5%,var(--paper))}
-.card.soon .card-head{margin-bottom:12px}
-.card.soon .card-head h3{padding-right:88px}
-.card.soon p{margin-bottom:0}
-.soon-badge{position:absolute;top:22px;right:26px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--c);padding:.4em 1em;border-radius:30px}
 
 /* акцент-разделитель */
 .quote-band{padding:118px 0;text-align:center;background:linear-gradient(180deg,#F0E7DA 0%,var(--cream) 100%)}
