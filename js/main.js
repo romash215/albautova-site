@@ -34,8 +34,19 @@ document.addEventListener('click', e => {
   const t = e.target.closest('[data-go]');
   if (!t) return;
   e.preventDefault();
-  showPage(t.dataset.go === 'brand' ? 'page-brand' : 'page-home');
+  const toBrand = t.dataset.go === 'brand';
+  if (location.hash !== (toBrand ? '#brend' : '')) {
+    history.pushState(null, '', toBrand ? '#brend' : location.pathname + location.search);
+  }
+  showPage(toBrand ? 'page-brand' : 'page-home');
 });
+
+// Прямая ссылка на программу брендинга: albautova.site/#brend
+function pageFromHash() {
+  return location.hash === '#brend' ? 'page-brand' : 'page-home';
+}
+if (location.hash === '#brend') showPage('page-brand');
+window.addEventListener('popstate', () => showPage(pageFromHash()));
 
 // Бургер-меню (мобильная навигация)
 document.querySelectorAll('.nav').forEach(nav => {
