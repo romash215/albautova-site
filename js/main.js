@@ -35,17 +35,17 @@ document.addEventListener('click', e => {
   if (!t) return;
   e.preventDefault();
   const toBrand = t.dataset.go === 'brand';
-  if (location.hash !== (toBrand ? '#brend' : '')) {
-    history.pushState(null, '', toBrand ? '#brend' : location.pathname + location.search);
+  if (location.hash !== (toBrand ? '#brand' : '')) {
+    history.pushState(null, '', toBrand ? '#brand' : location.pathname + location.search);
   }
   showPage(toBrand ? 'page-brand' : 'page-home');
 });
 
-// Прямая ссылка на программу брендинга: albautova.site/#brend
+// Прямая ссылка на программу брендинга: albautova.site/#brand
 function pageFromHash() {
-  return location.hash === '#brend' ? 'page-brand' : 'page-home';
+  return location.hash === '#brand' ? 'page-brand' : 'page-home';
 }
-if (location.hash === '#brend') showPage('page-brand');
+if (location.hash === '#brand') showPage('page-brand');
 window.addEventListener('popstate', () => showPage(pageFromHash()));
 
 // Бургер-меню (мобильная навигация)
